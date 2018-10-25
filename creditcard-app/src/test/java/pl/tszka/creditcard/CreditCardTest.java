@@ -13,5 +13,13 @@ public class CreditCardTest {
         
         Assert.assertTrue(card.getLimit() == 2000);
     }
-    
+    @Test
+    public void canBlockCard() {
+        
+        CreditCard card = new CreditCard();
+        
+        card.block();
+        
+        Assert.assertTrue(card.isBlocked());
+    }
 }
